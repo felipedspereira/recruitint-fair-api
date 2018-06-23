@@ -12,16 +12,16 @@ public class InfoDAO {
 	
 	public InfoDAO() {
 		Info info = new Info();
-		info.setDate(YearMonth.now());
+		info.setEventDate(YearMonth.now());
 		info.setLocation("São Paulo Center");
 		info.setName("São Paulo Recruiting Fair 2.0");
 		
 		infos.add(info);
 	}
 	
-	public Info getInfoByDate(YearMonth date) {
+	public Info getInfoByDate(YearMonth eventDate) {
 		Optional<Info> infoFromDB = infos.stream()
-			.filter(info -> info.getDate().equals(date))
+			.filter(info -> info.getEventDate().equals(eventDate))
 			.findFirst();
 		
 		return infoFromDB.orElseGet(() -> null);

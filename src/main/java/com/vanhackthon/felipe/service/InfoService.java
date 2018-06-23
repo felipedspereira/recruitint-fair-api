@@ -13,8 +13,11 @@ public class InfoService {
 		dao = new InfoDAO();
 	}
 	
-	public Info getInfo(YearMonth date) {
-		return dao.getInfoByDate(date);
+	public Info getInfo(String date) {
+		
+		YearMonth eventDate = date != null ? YearMonth.parse(date) : null;
+		
+		return dao.getInfoByDate(eventDate);
 	}
 	
 }

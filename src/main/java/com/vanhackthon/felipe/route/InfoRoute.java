@@ -2,8 +2,6 @@ package com.vanhackthon.felipe.route;
 
 import static spark.Spark.get;
 
-import java.time.YearMonth;
-
 import com.vanhackthon.felipe.domain.Info;
 import com.vanhackthon.felipe.service.InfoService;
 import com.vanhackthon.felipe.util.JsonTransformer;
@@ -22,16 +20,15 @@ public class InfoRoute implements SparkApplication {
 	public void init() {
 		
 		get("/info", (req, res) -> {
-			String strDate = req.queryParams("date");
-			YearMonth date = strDate != null ? YearMonth.parse(strDate) : null;
+			String eventDate = req.queryParams("date");
 			
-			res.type("application/json");
+			Info info = service.getInfo(eventDate);
 			
-			Info info = service.getInfo(date);
 			if (info == null) {
 				res.status(404);
 			}
 			
+			res.type("application/json");
 			return info;
 		}, new JsonTransformer());
 		

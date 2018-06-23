@@ -3,16 +3,16 @@ package com.vanhackthon.felipe.domain;
 import java.time.YearMonth;
 
 public class Info {
-	private YearMonth date;
+	private YearMonth eventDate;
 	private String name;
 	private String location;
 
-	public YearMonth getDate() {
-		return date;
+	public YearMonth getEventDate() {
+		return eventDate;
 	}
 
-	public void setDate(YearMonth date) {
-		this.date = date;
+	public void setEventDate(YearMonth date) {
+		this.eventDate = date;
 	}
 
 	public String getName() {
