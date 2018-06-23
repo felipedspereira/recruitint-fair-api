@@ -8,9 +8,13 @@ import java.util.Optional;
 import com.vanhackthon.felipe.domain.Info;
 
 public class InfoDAO {
+	
+	// Just mocking the database
 	private List<Info> infos = new ArrayList<>();
 	
 	public InfoDAO() {
+		
+		// Populating the mocked database with data
 		Info info = new Info();
 		info.setEventDate(YearMonth.now());
 		info.setLocation("São Paulo Center");
