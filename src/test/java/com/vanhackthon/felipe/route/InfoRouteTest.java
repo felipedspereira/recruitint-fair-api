@@ -6,7 +6,7 @@ import com.vanhackthon.felipe.BaseTest;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
-public class InfoTest extends BaseTest {
+public class InfoRouteTest extends BaseTest {
 
 	@Override
 	public void init() {
