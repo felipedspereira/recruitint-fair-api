@@ -6,7 +6,7 @@ import com.vanhackthon.felipe.route.InfoRoute;
 
 public class App {
 	public static void main(String[] args) {
-		new HelloWorldTest().init();
+		new HelloWorld().init();
 		new InfoRoute().init();
 		new AgendaRoute().init();
 	}
