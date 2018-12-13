@@ -1,7 +1,7 @@
 package com.vanhackthon.felipe;
 
 import com.vanhackthon.felipe.route.AgendaRoute;
-import com.vanhackthon.felipe.route.HelloWorldTest;
+import com.vanhackthon.felipe.route.HelloWorld;
 import com.vanhackthon.felipe.route.InfoRoute;
 
 public class App {
